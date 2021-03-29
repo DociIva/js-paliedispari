@@ -15,6 +15,7 @@ Stabiliamo se la somma dei due numeri
  è pari o dispari (usando una funzione)
 Dichiariamo chi ha vinto.
 */
+/*
 
 // 1 - chiedi all'utente di inserire una parola 
 
@@ -24,28 +25,42 @@ console.log(accessoParola);
 var parolaReverted = reverseChars(accessoParola);
 console.log(parolaReverted);
 
-
+// var nomePalindromo = ("Nome parindromo");
 // DEFINIZIONE con (FUNTION)
 function reverseChars(parola) {
     var reverse = "" ;
 
     // definizionde , loop all'inverso mettiamo i = a parola perchè così si parte dalla fine
-    //                               (  >= ricorda bene questo)
+    //                           (  >= ricorda bene questo)
     for (var i = parola.length -1; i >= 0 ; i--) {
        // chartAt , dammi la posizione dell'ultima parola , per avere la parte più piccola usare parola.[i] direttamente
        //console.log( parola.charAt(i) ); 
+       if(parolaReverted === false){
+        console.log('Nome non palindromo ')
+       } else {
+        console.log("Parola palindroma")
+       }
+
        
        // stringa che possiamo creare un carattere alla volta, concateniamo ogni volta un carattere
        // += e dopo la key che abbiamo usato per poter leggere i caratteri prima / oppure come prima charAt
-       reverse += parola[i];
+        reverse += parola[i];
     }
+    
+
+   
+
     // per poterlo portare fuori e farlo vedere
     return reverse;
 
 }
- 
+ */
 
+do {
+    var pariDispariUser = prompt("Pari o dispari? \n Digita la parola corrispondente").toLocaleLowerCase().trim();
 
+} while (pariDispariUser != 'pari' && pariDispariUser != 'dispari' && pariDispariUser != undefined);
+console.log("l'UTENTE HA SCELTO " , pariDispariUser );
 
 
 
