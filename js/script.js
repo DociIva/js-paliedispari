@@ -8,64 +8,38 @@ L’utente sceglie pari o dispari
 e inserisce un numero da 1 a 5.
 
 Generiamo un numero random (sempre da 1 a 5)
- per il computer (usando una funzione).
+per il computer (usando una funzione).
 Sommiamo i due numeri
 
 Stabiliamo se la somma dei due numeri
  è pari o dispari (usando una funzione)
 Dichiariamo chi ha vinto.
 */
-/*
 
 // 1 - chiedi all'utente di inserire una parola 
-
-var accessoParola = prompt('Inserire una parola');
+var accessoParola = prompt ("Inserisca una parola");
 console.log(accessoParola);
 
-var parolaReverted = reverseChars(accessoParola);
-console.log(parolaReverted);
+// 2 - invertite la parola dell 'utente
+// da mettere (la prima richiesta)
+var parolaCapovolta = utenteCapovolto(accessoParola);
+console.log(parolaCapovolta);
 
-// var nomePalindromo = ("Nome parindromo");
-// DEFINIZIONE con (FUNTION)
-function reverseChars(parola) {
-    var reverse = "" ;
+// inverti la parola
 
-    // definizionde , loop all'inverso mettiamo i = a parola perchè così si parte dalla fine
-    //                           (  >= ricorda bene questo)
-    for (var i = parola.length -1; i >= 0 ; i--) {
-       // chartAt , dammi la posizione dell'ultima parola , per avere la parte più piccola usare parola.[i] direttamente
-       //console.log( parola.charAt(i) ); 
-       if(parolaReverted === false){
-        console.log('Nome non palindromo ')
-       } else {
-        console.log("Parola palindroma")
-       }
-
-       
-       // stringa che possiamo creare un carattere alla volta, concateniamo ogni volta un carattere
-       // += e dopo la key che abbiamo usato per poter leggere i caratteri prima / oppure come prima charAt
-        reverse += parola[i];
+function utenteCapovolto (word){
+    var prova="";
+    console.log(prova);
+    for (var i = word.length - 1; i >=0; i--){
+        prova += word[i];
     }
-    
-
-   
-
-    // per poterlo portare fuori e farlo vedere
-    return reverse;
-
+    return prova;
 }
- */
-
-do {
-    var pariDispariUser = prompt("Pari o dispari? \n Digita la parola corrispondente").toLocaleLowerCase().trim();
-
-} while (pariDispariUser != 'pari' && pariDispariUser != 'dispari' && pariDispariUser != undefined);
-console.log("l'UTENTE HA SCELTO " , pariDispariUser );
-
-
-
-
-
-
+// si fà la decisione delle varie oopportunità
+if (accessoParola === parolaCapovolta){
+ console.log("La parola è palindorma " + accessoParola);
+} else if (accessoParola !== parolaCapovolta){
+    console.log("La parola non è palindroma ");
+}
 
 
