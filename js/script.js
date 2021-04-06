@@ -58,34 +58,10 @@ Stabiliamo se la somma dei due numeri
  è pari o dispari (usando una funzione)
 Dichiariamo chi ha vinto.
 */
-var persona = parseInt( prompt ("Scegli pari o dispari"));
 
-var persona2 = parseInt( prompt ("Scegli un numero da 1 a 5"));
+// crea una variabile per la scelta del giocatore
+var sceltaGiocatore = prompt('Gentilmente scegli tra : Pari o Dispari').toLocaleLowerCase.trim();
+console.log("La scelta del giocatore è : ", sceltaGiocatore);
 
-var sommaComputerPersona = persona2 + genRandom() + pariDispari();
-console.log("Somma ", + sommaComputerPersona);
-
-
-// controllare se è pari o Dispari
-
-var controlloPariDispari = sommaComputerPersona + pariDispari();
-
-// funzione per generazione del numero
-function genRandom (numero1){
-    var numero1 = Math.floor(Math.random() * 5) + 1;
-
-    var prova1 = "";
-
-    // ciò che deve ritornare 
-    return prova1;
-}
-
-// funzione per controllare se è pari o dispari
-
-function pariDispari (numero){ 
-    if(numero % 2 === 0){
-        console.log("Pari" , numero);
-    }else{
-        console.log("Dispari", numero);
-    }
-}
+// variabile per il numero del giocatore
+var numeroGiocatore = parseInt(prompt("Gentilmente ora iniserisci\n un numero da 1 a 5 ")).trim();
